@@ -1,3 +1,45 @@
+@font-face {
+    font-family:Raleway ;
+    src: url(Raleway-VariableFont_wght.ttf);
+}
 h1{
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem;
+}
+.A{
+    color:red
+}
+.B{
+    color:green
+}
+.C{
+    color:blue
+}
+.dolor{
+    color: blue;
+    font-weight: bolder;
+    font-style: italic;}
+.dolor:hover{
     color: red;
+}
+p{
+    font-size: 1rem;
+}
+body{
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Raleway;
+    background: linear-gradient(90deg, rgb(0, 0, 0,.1) 0%, White 20%, White 80%, rgb(0, 0, 0,.1) 100%);
+}
+
+.dede{
+    width: 33%;
+    float:left;
+    margin: 1rem;
+}
+.dede:hover{
+    width: 34%;
+    box-shadow: ;
 }
