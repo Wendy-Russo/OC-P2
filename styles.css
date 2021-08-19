@@ -1,45 +1,355 @@
-@font-face {
-    font-family:Raleway ;
-    src: url(Raleway-VariableFont_wght.ttf);
+/* ---------------------------------------- */
+/* ==            SUMMARY              */
+/*---------------------------------------- */
+
+/* L		- 1-COLORS */
+/* L		- 2-POLICES */
+/* L		- 2-HEADER */
+/* L		- 2-FOOTER */
+/* L		- 2-MEDIA QUERIES */
+
+
+/* ---------------------------------------- */
+/* ==       COLORS       */
+/*---------------------------------------- */
+.hbgtPop{
+    background-color: #f2f2f2;
 }
-h1{
+footer{
+    background-color: #f2f2f2;
+}
+a{
     color: black;
-    font-size: 2rem;
-    text-align: center;
-    margin: 2rem;
 }
-.A{
-    color:red
+i{
+    color:#0065fc;
 }
-.B{
-    color:green
-}
-.C{
-    color:blue
-}
-.dolor{
-    color: blue;
-    font-weight: bolder;
-    font-style: italic;}
-.dolor:hover{
-    color: red;
-}
-p{
-    font-size: 1rem;
+/* ---------------------------------------- */
+/* ==            POLICES             */
+/*---------------------------------------- */
+@font-face {
+    font-family:"raleway";
+    src: url("Raleway-VariableFont_wght.ttf");
 }
 body{
-    margin-left: 20%;
-    margin-right: 20%;
-    font-family: Raleway;
-    background: linear-gradient(90deg, rgb(0, 0, 0,.1) 0%, White 20%, White 80%, rgb(0, 0, 0,.1) 100%);
+    font-family:"raleway";
+}
+/* ---------------------------------------- */
+/* ==       COLORS       */
+/*---------------------------------------- */
+
+
+/* ---------------------------------------- */
+/* ==            ELEMENTS PRINCIPAUX             */
+/*---------------------------------------- */
+body{
+    margin:0rem;
+}
+ul {
+    list-style-type: none;
+   }
+a{
+    text-decoration:none;
+    color: black;
+}
+img{
+    width:100%;
+    height: auto;
+    margin:auto;
+}
+i{
+    font-size: 1rem;
+}
+#secrecherche,#gridcontainer{
+    margin:auto 1.5rem auto 1.5rem;
+}
+/* ---------------------------------------- */
+/* ==       SECTION 1     */
+/*---------------------------------------- */
+
+/*     HEADER      */
+
+#gridcontainer{ 
+    display: flex;
+    flex-wrap:wrap;
+    align-items:center;
+    height: 125px;
+   
+}
+#logo{
+    width: 100px;
+}
+#inscription{
+    color: #0065fc;
+    font-weight: 900;
+    display: flex;
+    justify-content: flex-end;
+}
+.pagenav{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    border-bottom: solid 3px #f2f2f2;
+}
+.pagenav:hover{
+    color:#0065fc;
+    padding-bottom: 10px;
+    border-bottom: solid 3px #0065fc;
+}
+#gridcontainer a{
+    width:50%;
+}
+/*     SEARCHBAR    */
+
+h1{
+    font-weight: bold;
+}
+form{
+    display: flex;
+    flex-wrap: nowrap;
+    border-radius: 15px;
+    border-top: solid 2px #f2f2f2;
+    border-bottom:solid 2px #f2f2f2;
+    
+    
+}
+.fa-map-marker-alt{
+    color:black;    
+}
+.baricon{
+    display: flex;
+    width: 50px;
+    height:50px;
+    background-color:#f2f2f2;
+    border-radius: 15px 0px 0px 15px;
+    align-items: center;
+    justify-content: center;
+    
+}
+input{
+    border: none;  
+    width: fit-content;
+    font-size: 1rem;
+    font-weight: bold;
+    
+}
+::placeholder{
+    color: black;
 }
 
-.dede{
-    width: 33%;
-    float:left;
-    margin: 1rem;
+.fa-search{
+    color: white;
 }
-.dede:hover{
-    width: 34%;
-    box-shadow: ;
+form button{
+    width: 50px;
+    margin: auto;
+    height:50px;
+    background-color:#0065fc;
+    border: none;
+    border-radius: 15px;
+}
+/*     FILTRES      */
+
+.divfiltre{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filtre{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0rem 1rem 0rem 0rem;
+    background-color: white;
+    border:solid 2px #d9d9d9;
+    border-radius: 500px ;
+    width:auto;
+    margin: .5rem .5rem .5rem 0rem;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.filtre i{
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    background-color: #DEEBFF;
+    border-radius: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin: -2px .5rem -2px -2px;
+    
+}
+
+/*     INFORMATIONS      */
+.infobar{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.divinfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    min-width: 2rem ;
+    height: 2rem;
+    min-height: 2rem;
+    border-radius: 2rem;
+    margin: 1rem 1rem 3rem 0rem;
+    border:solid 2px #f2f2f2;
+}
+
+/*     SECTION HEB TITRE      */
+
+.hébpophead{
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: nowrap
+}
+h2{
+    margin:0rem 0rem 1.5rem 0rem;
+    padding: 0rem;
+}
+.fa-chart-line{
+    margin: auto auto 1.5rem auto;
+    font-size: 1.5rem;
+    color: black;
+    
+}
+/*     SECTION POP      */
+
+#hébpop{
+    background-color: #f2f2f2;
+    padding: 1rem;
+}
+.figurehébpop{
+    display: flex;
+    width: 315px;
+    height: 125px;
+    margin: 0px auto 1rem auto;
+    background-color: white;
+    border-radius: 1.25rem;
+    padding: .33rem;
+    box-shadow:0rem 0rem 1rem rgba(0, 0, 0, .1);
+
+}
+.figurehébpop img{
+    height:100%;
+    width: 125px;
+    margin:0px .5rem 0px 0px;
+    object-fit: cover;
+    border-radius: 1rem 0rem 0rem 1rem;
+}
+.figurehébpop h3{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: .5rem .1rem .5rem 0px;
+}
+.figurehébpop p{
+    font-size: .8rem;
+    margin: 0rem 0rem 0rem 0rem;
+    padding: 0rem;
+}
+
+.figurehébpop .etoiles{
+    display: flex;
+    flex-wrap: nowrap;
+    margin:2rem 0px .5px 0px;
+}
+.figurehébpop .fa-star{
+    font-size: .8rem;
+    margin: 0rem 0px 0px 0px;
+    padding: .1rem;
+}
+
+/*    ETOILES      */
+
+.staroff{
+    color:#d9d9d9;
+}
+/*     HEB CARD MARSEILLE      */
+#hébmars{
+    padding: 1rem;
+}
+.figurehebmars{
+    display: flex;
+    flex-wrap: wrap;
+    width: 315px;
+    height: 190px;
+    margin: 0px auto 1rem auto;
+    background-color: white;
+    border-radius: 1.25rem;
+    padding: .33rem;
+    box-shadow:0rem 0rem 1rem rgba(0, 0, 0, .1);
+}
+.figurehebmars img{
+    height:110px;
+    width: 100%;
+    margin:0px 0rem 0rem 0px;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+.figurehebmars h3{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: .5rem 0rem .5rem .5rem;
+}
+.figurehebmars p{
+    font-size: .8rem;
+    margin: 0rem 0rem 0rem .5rem;
+    padding: 0rem;
+}
+.figurehebmars .etoiles{
+    display: flex;
+    flex-wrap: nowrap;
+    margin:.5rem 0px .5rem .5rem;
+}
+.figurehebmars .fa-star{
+    font-size: .8rem;
+    margin: 0rem 0px 0px 0px;
+    padding: .1rem;
+}
+/*     AFFICHER PLUS      */
+.affplus{
+    font-weight: bolder;
+}
+/*     ACT CARD MARSEILLE      */
+#actmars{
+    padding: 2rem 1rem 1rem 1rem;
+}
+.figureactmars{
+    display: flex;
+    flex-wrap: wrap;
+    width: 325px;
+    height: 180px;
+    margin: 0px auto 1rem auto;
+    background-color: white;
+    border-radius: 1.25rem;
+    box-shadow:0rem 0rem 1rem rgba(0, 0, 0, .1);
+}
+.figureactmars img{
+    height:135px;
+    width: 100%;
+    margin:0px 0rem 0rem 0px;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+.figureactmars h3{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: auto 0rem auto .5rem;
+}
+/*     FOOTER      */
+footer{
+    padding:2rem 0rem 2rem 0rem;
+}
+footer li{
+    margin:1rem 0rem 1rem 0rem;
+}
+footer ul{
+    margin:3rem 0rem 1rem 0rem;
+}
+footer h3{
+    font-weight: bold;
 }
