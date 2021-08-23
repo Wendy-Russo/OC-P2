@@ -43,7 +43,10 @@ body{
 /* ==            ELEMENTS PRINCIPAUX             */
 /*---------------------------------------- */
 body{
-    margin:0rem;
+    margin:0;
+    padding: 0;    
+    overflow-x: hidden;
+    zoom: 1;
 }
 ul {
     list-style-type: none;
@@ -60,75 +63,160 @@ img{
 i{
     font-size: 1rem;
 }
-#secrecherche,#gridcontainer{
-    margin:auto 1.5rem auto 1.5rem;
+button{
+    cursor: pointer;
 }
+#gridcontainer a{
+    font-size: 1rem;
+}
+@media (max-width: 1023px) {
+    #gridcontainer{
+        margin:0;
+    }
+}
+
 /* ---------------------------------------- */
 /* ==       SECTION 1     */
 /*---------------------------------------- */
 
 /*     HEADER      */
-
+header{
+    display: flex;
+    justify-content: center;
+}
 #gridcontainer{ 
     display: flex;
     flex-wrap:wrap;
     align-items:center;
     height: 125px;
+    width: 100%;
+    margin: 0;
    
 }
-#logo{
-    width: 100px;
+#logo img{
+    width: fit-content;
+    margin: 0;
 }
 #inscription{
     color: #0065fc;
     font-weight: 900;
-    display: flex;
-    justify-content: flex-end;
 }
-.pagenav{
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 10px;
-    border-bottom: solid 3px #f2f2f2;
-}
-.pagenav:hover{
-    color:#0065fc;
-    padding-bottom: 10px;
-    border-bottom: solid 3px #0065fc;
-}
-#gridcontainer a{
-    width:50%;
-}
-/*     SEARCHBAR    */
 
+@media (max-width: 767px) {
+    .pagenav{
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 1rem;
+        border-bottom: solid 3px #f2f2f2;
+        
+    }
+    .pagenav:hover{
+        color:#0065fc;
+        padding-bottom: 1rem;
+        border-bottom: solid 3px #0065fc;
+    }
+    #gridcontainer a{
+        display: flex;
+        justify-content: center;
+        width:50%;
+    }
+}
+@media (min-width: 768px) {
+    #gridcontainer{
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: fit-content;
+        width: 90%;
+    }
+
+    #logo{
+        padding: 1rem 0 .5rem 0;
+        width: 50%;
+    }
+    #inscription {
+        padding-top: 2.2rem;
+        order:2;
+    }
+    .pagenav{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 2rem;
+        border-top: solid 3px #f2f2f2;
+        font-weight: bold;
+    }
+    .pagenav:hover{
+        color:#0065fc;
+        padding-top: 2rem;
+        border-top: solid 3px #0065fc;
+    }
+    
+    #gridcontainer a{
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1440px) {
+    #logo{
+        width: 66.6%;
+    }
+}
+/*   MAIN    */
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/*     SEC RECHERCHE    */
+
+#secrecherche{
+    display: flex;
+    height: 550px;
+    width: 90%;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+#secrecherche h1{
+    margin: 0;
+    font-size: 1.4rem;
+}
+#secrecherche p{
+    width: 100%;
+    margin: 0;
+}
 h1{
     font-weight: bold;
 }
+.navbar{
+    width: 100%;}
 form{
     display: flex;
     flex-wrap: nowrap;
-    border-radius: 15px;
+    width: fit-content;
+    justify-content: space-between;
+    border-radius: 1rem;
     border-top: solid 2px #f2f2f2;
     border-bottom:solid 2px #f2f2f2;
-    
-    
 }
 .fa-map-marker-alt{
     color:black;    
 }
 .baricon{
     display: flex;
-    width: 50px;
-    height:50px;
+    width: 3rem;
+    height:3rem;
     background-color:#f2f2f2;
-    border-radius: 15px 0px 0px 15px;
+    border-radius: 1rem 0rem 0rem 1rem;
     align-items: center;
     justify-content: center;
     
 }
 input{
     border: none;  
-    width: fit-content;
+    width: 160px;
     font-size: 1rem;
     font-weight: bold;
     
@@ -141,34 +229,77 @@ input{
     color: white;
 }
 form button{
-    width: 50px;
-    margin: auto;
-    height:50px;
+    height:3rem;
+    width: 3rem;
     background-color:#0065fc;
     border: none;
-    border-radius: 15px;
+    font-size: 0%;
+    border-radius: 1rem;
+    
+    
+}
+@media (min-width: 768px) {
+    #secrecherche{
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: 300px;
+        padding:1rem 0 1rem 0;
+    }
+    .fa-search{
+        font-size: 0;
+    }
+    input{
+        width: 200px;
+    }
+    form button{
+        width: fit-content;
+        font-weight: bold;
+        padding: 0 1rem 0 1rem;
+        color: white;
+        font-size: 1rem;
+        border-radius: 0 1rem 1rem 0;
+    }
+}
+@media (max-width: 1023px) {
+    form button{
+        
+    }
 }
 /*     FILTRES      */
+#filtretitre {
+    
+    height: fit-content;
+    margin: 0;
+}
 
 .divfiltre{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+    width: 100%;
 }
+
 
 .filtre{
     display: flex;
     align-items: center;
     justify-content:space-between;
-    padding: 0rem 1rem 0rem 0rem;
+    width:fit-content;
+    height: fit-content;
+    margin:0;
+    padding:0 1rem 0 0;
     background-color: white;
     border:solid 2px #d9d9d9;
     border-radius: 500px ;
-    width:auto;
-    margin: .5rem .5rem .5rem 0rem;
     font-weight: bold;
     font-size: 1rem;
+    text-align: center;
 }
-
+.filtre:hover{
+    background-color: #DEEBFF;
+}
 .filtre i{
     display: flex;
     width: 3rem;
@@ -177,179 +308,397 @@ form button{
     border-radius: 3rem;
     align-items: center;
     justify-content: center;
-    margin: -2px .5rem -2px -2px;
+    margin: -2px 0 -2px -2px;
     
 }
-
-/*     INFORMATIONS      */
-.infobar{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+@media (min-width: 768px) {
+    .divfiltre{
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        height:40px;
+        
+        
+    }
 }
+@media (max-width: 1023px) {
+}
+@media (min-width: 1024px) {
+    .divfiltre{
+        width: 90%;
+    }
+}
+/*     INFORMATIONS      */
 .divinfo{
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 2rem;
-    min-width: 2rem ;
-    height: 2rem;
-    min-height: 2rem;
-    border-radius: 2rem;
-    margin: 1rem 1rem 3rem 0rem;
-    border:solid 2px #f2f2f2;
+    width: 100%;
+    height: fit-content;
+    margin: 0;
 }
-
-/*     SECTION HEB TITRE      */
-
-.hébpophead{
+.divinfo i{
     display: flex;
-    align-items: flex-end;
-    flex-wrap: nowrap
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    min-width: 2rem;
+    height: 2rem;
+    border: solid 1px #d9d9d9;
+    border-radius: 2rem;
 }
-h2{
-    margin:0rem 0rem 1.5rem 0rem;
-    padding: 0rem;
+.divinfo p{
+    text-align: center;
+}
+
+
+/*     SECTION HEB      */
+#heb{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+@media (min-width:1440px){
+    #heb{
+        height:600px;
+        width: 90%;
+        flex-direction:row-reverse ;
+        justify-content: space-between;
+    }
+}
+/*     SECTION HEB POP      */
+.hebpoptitre h2{
+    margin:0;
+    padding: 0;
 }
 .fa-chart-line{
-    margin: auto auto 1.5rem auto;
+    margin: 0;
     font-size: 1.5rem;
     color: black;
     
 }
-/*     SECTION POP      */
 
-#hébpop{
-    background-color: #f2f2f2;
-    padding: 1rem;
-}
-.figurehébpop{
+#hebpop{
     display: flex;
-    width: 315px;
-    height: 125px;
-    margin: 0px auto 1rem auto;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
+    height:500px;
+    width: 100%;
+    background-color: #f2f2f2;    
+}
+.hebpoptitre{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 85%;
+    max-width: 100%;
+}
+.hebpoplink{
+    display: flex;
+    justify-content: space-between;
+    width: 84%;
+    height: 24%;
+    margin: 0;
+    padding: .33rem;
     background-color: white;
     border-radius: 1.25rem;
-    padding: .33rem;
     box-shadow:0rem 0rem 1rem rgba(0, 0, 0, .1);
-
 }
-.figurehébpop img{
+.hebpoplink img{
     height:100%;
-    width: 125px;
-    margin:0px .5rem 0px 0px;
+    width: 40%;
+    margin:0;
     object-fit: cover;
     border-radius: 1rem 0rem 0rem 1rem;
 }
-.figurehébpop h3{
+.hebpopcaption{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 56%;
+    padding:0;
+    margin:0;
+
+}
+.hebpopcaption h3{
     font-size: 1rem;
     font-weight: bold;
-    margin: .5rem .1rem .5rem 0px;
+    margin: 0;
 }
-.figurehébpop p{
+.hebpopcaption p{
     font-size: .8rem;
-    margin: 0rem 0rem 0rem 0rem;
-    padding: 0rem;
+    margin: 0;
+    padding: 0;
 }
 
-.figurehébpop .etoiles{
+.hebpopcaption .etoiles{
     display: flex;
     flex-wrap: nowrap;
-    margin:2rem 0px .5px 0px;
+    margin:0;
 }
-.figurehébpop .fa-star{
+.hebpopcaption .fa-star{
     font-size: .8rem;
-    margin: 0rem 0px 0px 0px;
+    margin: 0;
     padding: .1rem;
 }
-
-/*    ETOILES      */
 
 .staroff{
     color:#d9d9d9;
 }
-/*     HEB CARD MARSEILLE      */
-#hébmars{
-    padding: 1rem;
+@media (min-width: 768px) {
+    #hebpop{
+        padding:1rem 0 1rem 0;
+        height: 350px;
+        justify-content: space-evenly;
+    }
+    .hebpoplink{
+        justify-content: space-between;
+        width: 40%;
+        height: 35%;
+        border-radius: 1.25rem;
+    }
 }
-.figurehebmars{
+@media (min-width: 1024px){
+    #hebpop{
+        height: 200px;
+    }
+    .hebpoplink{
+        width:28%;
+        height: 60%;
+    }
+}
+@media (min-width:1440px){
+    #hebpop{
+        height:95%;
+        width: 32.5%;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+    .hebpoplink{
+        height:25%;
+        width:100%;
+    }
+    .hebpoptitre{
+        width: 100%;
+    }
+}
+/*     HEB CARD MARSEILLE      */
+
+
+#hebmars{
     display: flex;
     flex-wrap: wrap;
-    width: 315px;
-    height: 190px;
-    margin: 0px auto 1rem auto;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+    height: 1200px;
+    width: 85%;
+    padding: 1rem 0 1rem 0;
+}
+
+#hebmars h2{
+    width: 100%;
+    margin: 0;
+}
+
+.hebmarslink{
+    width: 100%;
+    height: 12.5%;
     background-color: white;
+    padding: .4rem;
     border-radius: 1.25rem;
-    padding: .33rem;
     box-shadow:0rem 0rem 1rem rgba(0, 0, 0, .1);
 }
-.figurehebmars img{
-    height:110px;
+.hebmarsimg{
+    height:60%;
     width: 100%;
     margin:0px 0rem 0rem 0px;
     object-fit: cover;
     border-radius: 1rem 1rem 0rem 0rem;
 }
-.figurehebmars h3{
+.hebmarscaption{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 40%;
+    width: 100%;
+}
+.hebmarscaption h3{
     font-size: 1rem;
     font-weight: bold;
-    margin: .5rem 0rem .5rem .5rem;
+    margin:0;
 }
-.figurehebmars p{
+.hebmarscaption p{
     font-size: .8rem;
-    margin: 0rem 0rem 0rem .5rem;
-    padding: 0rem;
+    margin: 0;
+    padding: 0;
 }
-.figurehebmars .etoiles{
+.hebmarscaption .etoiles{
     display: flex;
     flex-wrap: nowrap;
-    margin:.5rem 0px .5rem .5rem;
+    margin:0;
 }
-.figurehebmars .fa-star{
+.hebmarscaption .fa-star{
     font-size: .8rem;
-    margin: 0rem 0px 0px 0px;
+    margin: 0;
     padding: .1rem;
+}
+@media (min-width: 768px) {
+    #hebmars{
+        height: 800px;
+        justify-content: space-between;
+        padding:1rem 0 1rem 0;
+        
+    }
+    .hebmarslink{
+        height: 25%;
+        width: 45%;
+        
+    }
+}
+@media (max-width: 1023px){
+}
+@media (min-width: 1024px){
+    #hebmars{
+        height: 550px;
+    }
+    .hebmarslink{
+        height: 35%;
+        width: 30%;
+    }
+}
+@media (min-width:1440px){
+    #hebmars{
+        height:95%;
+        width:60%;
+        background-color: #f2f2f2;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
 }
 /*     AFFICHER PLUS      */
 .affplus{
+    width: 100%;
     font-weight: bolder;
+}
+@media (min-width: 768px) {
+    .affplus{
+        font-size: 1.3rem;
+    }
 }
 /*     ACT CARD MARSEILLE      */
 #actmars{
-    padding: 2rem 1rem 1rem 1rem;
-}
-.figureactmars{
     display: flex;
     flex-wrap: wrap;
-    width: 325px;
-    height: 180px;
-    margin: 0px auto 1rem auto;
+    justify-content: center;
+    width: 90%;
+    padding:1rem 0 1rem 0;
+}
+#actmarscards{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    width: 100%;
+    height: 900px;
+    margin: 0;
+    padding: 0;
+}
+#actmarstitre{
+    height: fit-content;
+    width:100%;
+    margin: 0;
+}
+.actmarslink,.actmarslinktall{
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    height: 15%;
+    margin: 0;
     background-color: white;
     border-radius: 1.25rem;
     box-shadow:0rem 0rem 1rem rgba(0, 0, 0, .1);
 }
-.figureactmars img{
-    height:135px;
+.actmarslink img,.actmarslinktall img{
+    height:85%;
     width: 100%;
-    margin:0px 0rem 0rem 0px;
+    margin:0;
     object-fit: cover;
     border-radius: 1rem 1rem 0rem 0rem;
 }
-.figureactmars h3{
+.actmarslink h3,.actmarslinktall h3{
     font-size: 1rem;
     font-weight: bold;
     margin: auto 0rem auto .5rem;
 }
+@media (min-width: 768px) {
+    #actmarscards{
+        justify-content: space-between;
+        height: 600px;
+    }
+    .actmarslink,.actmarslinktall{
+        width: 47.5%;
+        height: 30%;
+    }
+}
+@media (max-width: 1023px){
+}
+
+@media (min-width: 1024px){   
+    #actmarscards{
+        display: flex;
+        flex-direction: column;
+        height: 350px;
+    }
+    .actmarslink, .actmarslinktall{
+        width: 23%;
+    } 
+    .actmarslink{
+        height: 45%;
+    }
+    .actmarslinktall{
+        height: 100%;
+    }
+}
+@media (min-width:1440px){
+    #actmars{
+        height:450px;
+        
+    }
+}
 /*     FOOTER      */
 footer{
+    display: flex;
+    justify-content: center;
     padding:2rem 0rem 2rem 0rem;
 }
-footer li{
-    margin:1rem 0rem 1rem 0rem;
+#footerdiv{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
 }
 footer ul{
-    margin:3rem 0rem 1rem 0rem;
+    display: flex;
+    flex-direction:column ;    
+    justify-content: space-evenly;
+    height: 150px;
+    width: fit-content;
+    margin:0;
+}
+footer li{
+    margin:0;
 }
 footer h3{
     font-weight: bold;
+    margin: 0;
+}
+@media (min-width: 768px) {
+   
 }
