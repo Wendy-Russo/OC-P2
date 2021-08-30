@@ -4,20 +4,21 @@
 
 /* L		- 1-COLORS */
 /* L		- 2-POLICES */
+/* L		- 2-ELEMENTS PRINCIPAUX */
 /* L		- 2-HEADER */
-/* L		- 2-FOOTER */
+/* L		- 2-MAIN */
+/* L		- 2-SEC 1 SEARCH*/
+/* L		- 2-SEC 2 HEB*/
+/* L		- 2-SEC 3 ACTIVITE */
+/* L        - 2-FOOTER*/
 /* L		- 2-MEDIA QUERIES */
 
 
 /* ---------------------------------------- */
 /* ==       COLORS       */
 /*---------------------------------------- */
-.hbgtPop{
-    background-color: #f2f2f2;
-}
-footer{
-    background-color: #f2f2f2;
-}
+
+
 a{
     color: black;
 }
@@ -35,11 +36,6 @@ body{
     font-family:"raleway";
 }
 /* ---------------------------------------- */
-/* ==       COLORS       */
-/*---------------------------------------- */
-
-
-/* ---------------------------------------- */
 /* ==            ELEMENTS PRINCIPAUX             */
 /*---------------------------------------- */
 body{
@@ -47,6 +43,9 @@ body{
     padding: 0;    
     overflow-x: hidden;
     zoom: 1;
+}
+h1{
+    font-weight: bold;
 }
 ul {
     list-style-type: none;
@@ -69,17 +68,15 @@ button{
 #gridcontainer a{
     font-size: 1rem;
 }
-@media (max-width: 1023px) {
-    #gridcontainer{
-        margin:0;
-    }
+#gridcontainer{
+    margin:0;
 }
 
-/* ---------------------------------------- */
-/* ==       SECTION 1     */
-/*---------------------------------------- */
 
-/*     HEADER      */
+
+/* ---------------------------------------- */
+/* ==       HEADER     */
+/*---------------------------------------- */
 header{
     display: flex;
     justify-content: center;
@@ -102,93 +99,38 @@ header{
     font-weight: 900;
 }
 
-@media (max-width: 767px) {
-    .pagenav{
-        display: flex;
-        justify-content: space-around;
-        padding-bottom: 1rem;
-        border-bottom: solid 3px #f2f2f2;
-        
-    }
-    .pagenav:hover{
-        color:#0065fc;
-        padding-bottom: 1rem;
-        border-bottom: solid 3px #0065fc;
-    }
-    #gridcontainer a{
-        display: flex;
-        justify-content: center;
-        width:50%;
-    }
-}
-@media (min-width: 768px) {
-    #gridcontainer{
-        flex-wrap: nowrap;
-        align-items: flex-start;
-        justify-content: space-between;
-        height: fit-content;
-        width: 90%;
-    }
 
-    #logo{
-        padding: 1rem 0 .5rem 0;
-        width: 50%;
-    }
-    #inscription {
-        padding-top: 2.2rem;
-        order:2;
-    }
-    .pagenav{
-        display: flex;
-        justify-content: space-around;
-        padding-top: 2rem;
-        border-top: solid 3px #f2f2f2;
-        font-weight: bold;
-    }
-    .pagenav:hover{
-        color:#0065fc;
-        padding-top: 2rem;
-        border-top: solid 3px #0065fc;
-    }
-    
-    #gridcontainer a{
-        display: flex;
-        justify-content: flex-start;
-    }
-}
-@media (min-width: 1024px) {
-}
-@media (min-width: 1440px) {
-    #logo{
-        width: 66.6%;
-    }
-}
-/*   MAIN    */
 
+
+
+/* ---------------------------------------- */
+/* ==       MAIN     */
+/*---------------------------------------- */
 main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-/*     SEC RECHERCHE    */
 
-#secrecherche{
+
+
+/* ---------------------------------------- */
+/* ==       SECTION 1 RECHERCHE      */
+/*---------------------------------------- */
+#secrech{
     display: flex;
     height: 550px;
     width: 90%;
     flex-wrap: wrap;
     align-content: space-around;
 }
-#secrecherche h1{
+#secrech h1{
     margin: 0;
     font-size: 1.4rem;
 }
-#secrecherche p{
+#secrech p{
     width: 100%;
     margin: 0;
-}
-h1{
-    font-weight: bold;
 }
 .navbar{
     width: 100%;}
@@ -201,9 +143,6 @@ form{
     border-top: solid 2px #f2f2f2;
     border-bottom:solid 2px #f2f2f2;
 }
-.fa-map-marker-alt{
-    color:black;    
-}
 .baricon{
     display: flex;
     width: 3rem;
@@ -212,7 +151,9 @@ form{
     border-radius: 1rem 0rem 0rem 1rem;
     align-items: center;
     justify-content: center;
-    
+}
+.fa-map-marker-alt{
+    color:black;    
 }
 input{
     border: none;  
@@ -224,50 +165,20 @@ input{
 ::placeholder{
     color: black;
 }
-
-.fa-search{
-    color: white;
-}
 form button{
     height:3rem;
     width: 3rem;
     background-color:#0065fc;
     border: none;
     font-size: 0%;
-    border-radius: 1rem;
-    
-    
+    border-radius: 1rem;   
 }
-@media (min-width: 768px) {
-    #secrecherche{
-        flex-wrap: wrap;
-        align-content: space-between;
-        height: 300px;
-        padding:1rem 0 1rem 0;
-    }
-    .fa-search{
-        font-size: 0;
-    }
-    input{
-        width: 200px;
-    }
-    form button{
-        width: fit-content;
-        font-weight: bold;
-        padding: 0 1rem 0 1rem;
-        color: white;
-        font-size: 1rem;
-        border-radius: 0 1rem 1rem 0;
-    }
+.fa-search{
+    color: white;
 }
-@media (max-width: 1023px) {
-    form button{
-        
-    }
-}
+
 /*     FILTRES      */
 #filtretitre {
-    
     height: fit-content;
     margin: 0;
 }
@@ -297,9 +208,6 @@ form button{
     font-size: 1rem;
     text-align: center;
 }
-.filtre:hover{
-    background-color: #DEEBFF;
-}
 .filtre i{
     display: flex;
     width: 3rem;
@@ -309,24 +217,11 @@ form button{
     align-items: center;
     justify-content: center;
     margin: -2px 0 -2px -2px;
-    
 }
-@media (min-width: 768px) {
-    .divfiltre{
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
-        height:40px;
-        
-        
-    }
+.filtre:hover{
+    background-color: #DEEBFF;
 }
-@media (max-width: 1023px) {
-}
-@media (min-width: 1024px) {
-    .divfiltre{
-        width: 90%;
-    }
-}
+
 /*     INFORMATIONS      */
 .divinfo{
     display: flex;
@@ -350,8 +245,11 @@ form button{
 }
 
 
-/*     SECTION HEB      */
-#heb{
+
+/*------------------------*/
+/*     SECTION 2          */
+/*------------------------*/
+#secheb{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -359,26 +257,18 @@ form button{
     
 }
 @media (min-width:1440px){
-    #heb{
+    #secheb{
         height:600px;
         width: 90%;
         flex-direction:row-reverse ;
         justify-content: space-between;
     }
 }
-/*     SECTION HEB POP      */
-.hebpoptitre h2{
-    margin:0;
-    padding: 0;
-}
-.fa-chart-line{
-    margin: 0;
-    font-size: 1.5rem;
-    color: black;
-    
-}
 
-#hebpop{
+
+
+/*     HEB POP      */
+#divhebpop{
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
@@ -395,6 +285,15 @@ form button{
     justify-content: space-between;
     width: 90%;
     max-width: 100%;
+}
+.hebpoptitre h2{
+    margin:0;
+    padding: 0;
+}
+.fa-chart-line{
+    margin: 0;
+    font-size: 1.5rem;
+    color: black;
 }
 .hebpoplink{
     display: flex;
@@ -423,7 +322,6 @@ form button{
     width: 56%;
     padding:0;
     margin:0;
-
 }
 .hebpopcaption h3{
     font-size: 1rem;
@@ -435,7 +333,6 @@ form button{
     margin: 0;
     padding: 0;
 }
-
 .hebpopcaption .etoiles{
     display: flex;
     flex-wrap: nowrap;
@@ -446,51 +343,15 @@ form button{
     margin: 0;
     padding: .1rem;
 }
-
 .staroff{
     color:#d9d9d9;
 }
-@media (min-width: 768px) {
-    #hebpop{
-        padding:1rem 0 1rem 0;
-        height: 350px;
-        justify-content: space-evenly;
-    }
-    .hebpoplink{
-        justify-content: space-between;
-        width: 40%;
-        height: 35%;
-        border-radius: 1.25rem;
-    }
-}
-@media (min-width: 1024px){
-    #hebpop{
-        height: 200px;
-    }
-    .hebpoplink{
-        width:28%;
-        height: 60%;
-    }
-}
-@media (min-width:1440px){
-    #hebpop{
-        height:95%;
-        width: 32.5%;
-        border-radius: 1rem;
-        padding: 1rem;
-    }
-    .hebpoplink{
-        height:25%;
-        width:100%;
-    }
-    .hebpoptitre{
-        width: 100%;
-    }
-}
-/*     HEB CARD MARSEILLE      */
 
 
-#hebmars{
+
+
+/*     HEB MARSEILLE      */
+#divhebmars{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -500,12 +361,10 @@ form button{
     width: 90%;
     padding: 1rem 0 1rem 0;
 }
-
-#hebmars h2{
+#divhebmars h2{
     width: 100%;
     margin: 0;
 }
-
 .hebmarslink{
     width: 100%;
     height: 12.5%;
@@ -548,57 +407,30 @@ form button{
     margin: 0;
     padding: .1rem;
 }
-@media (min-width: 768px) {
-    #hebmars{
-        height: 800px;
-        justify-content: space-between;
-        padding:1rem 0 1rem 0;
-        
-    }
-    .hebmarslink{
-        height: 25%;
-        width: 45%;
-        
-    }
-}
-@media (max-width: 1023px){
-}
-@media (min-width: 1024px){
-    #hebmars{
-        height: 550px;
-    }
-    .hebmarslink{
-        height: 35%;
-        width: 30%;
-    }
-}
-@media (min-width:1440px){
-    #hebmars{
-        height:95%;
-        width:60%;
-        background-color: #f2f2f2;
-        border-radius: 1rem;
-        padding: 1rem;
-    }
 
-}
 /*     AFFICHER PLUS      */
 .affplus{
     width: 100%;
     font-weight: bolder;
 }
-@media (min-width: 768px) {
-    .affplus{
-        font-size: 1.3rem;
-    }
-}
-/*     ACT CARD MARSEILLE      */
-#actmars{
+
+
+
+
+/*---------------------------------*/
+/*     SECTION ACT  MARSEILLE      */
+/*---------------------------------*/
+#secact{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 90%;
-    padding:1rem 0 1rem 0;
+    padding:1rem 0 2rem 0;
+}
+#actmarstitre{
+    height: fit-content;
+    width:100%;
+    margin: 0;
 }
 #actmarscards{
     display: flex;
@@ -609,11 +441,6 @@ form button{
     height: 900px;
     margin: 0;
     padding: 0;
-}
-#actmarstitre{
-    height: fit-content;
-    width:100%;
-    margin: 0;
 }
 .actmarslink,.actmarslinktall{
     display: flex;
@@ -637,6 +464,223 @@ form button{
     font-weight: bold;
     margin: auto 0rem auto .5rem;
 }
+
+
+
+
+/*-----------------*/
+/*     FOOTER      */
+/*-----------------*/
+footer{
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    padding:2rem 0rem 2rem 0rem;
+}
+#divfooter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+}
+footer ul{
+    display: flex;
+    flex-direction:column ;    
+    justify-content: space-evenly;
+    height: 150px;
+    width: fit-content;
+    margin:0;
+}
+footer li{
+    margin:0;
+}
+footer h3{
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/*---------------*/
+/* MEDIA QUERIES */
+/*---------------*/
+
+/*-----HEADER-----*/
+@media (max-width: 767px) {
+    #gridcontainer a{
+        display: flex;
+        justify-content: center;
+        width:50%;
+    }
+    .pagenav{
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 1rem;
+        border-bottom: solid 3px #f2f2f2;
+    }
+    .pagenav:hover{
+        color:#0065fc;
+        padding-bottom: 1rem;
+        border-bottom: solid 3px #0065fc;
+    }
+}
+@media (min-width: 768px) {
+    #gridcontainer{
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: fit-content;
+        width: 90%;
+    }
+    #gridcontainer a{
+        display: flex;
+        justify-content: flex-start;
+    }
+    #logo{
+        padding: 1rem 0 .5rem 0;
+        width: 50%;
+    }
+    #inscription {
+        padding-top: 2.2rem;
+        order:2;
+    }
+    .pagenav{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 2rem;
+        border-top: solid 3px #f2f2f2;
+        font-weight: bold;
+    }
+    .pagenav:hover{
+        color:#0065fc;
+        padding-top: 2rem;
+        border-top: solid 3px #0065fc;
+    }
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1440px) {
+    #logo{
+        width: 66.6%;
+    }
+}
+/*-----MAIN-----*/
+/*-----SEC 1 SEARCH-----*/
+@media (min-width: 768px) {
+    #secrech{
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: 300px;
+        padding:1rem 0 1rem 0;
+    }
+    input{
+        width: 200px;
+    }
+    form button{
+        width: fit-content;
+        font-weight: bold;
+        padding: 0 1rem 0 1rem;
+        color: white;
+        font-size: 1rem;
+        border-radius: 0 1rem 1rem 0;
+    }
+    .fa-search{
+        font-size: 0;
+    }
+}
+/*-----FILTRES----*/
+@media (min-width: 768px) {
+    .divfiltre{
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        height:40px;        
+    }
+}
+@media (max-width: 1023px) {
+}
+@media (min-width: 1024px) {
+    .divfiltre{
+        width: 90%;
+    }
+}
+@media (max-width: 1023px) {
+}
+/*-----SEC 2 HEB-----*/
+/*HEBPOP*/
+@media (min-width: 768px) {
+    #divhebpop{
+        padding:1rem 0 1rem 0;
+        height: 350px;
+        justify-content: space-evenly;
+    }
+    .hebpoplink{
+        justify-content: space-between;
+        width: 40%;
+        height: 35%;
+        border-radius: 1.25rem;
+    }
+}
+@media (min-width: 1024px){
+    #divhebpop{
+        height: 200px;
+    }
+    .hebpoplink{
+        width:28%;
+        height: 60%;
+    }
+}
+@media (min-width:1440px){
+    #divhebpop{
+        height:95%;
+        width: 32.5%;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+    .hebpoplink{
+        height:25%;
+        width:100%;
+    }
+    .hebpoptitre{
+        width: 100%;
+    }
+}
+/*HEBMARS*/
+@media (min-width: 768px) {
+    #divhebmars{
+        height: 800px;
+        justify-content: space-between;
+        padding:1rem 0 1rem 0;
+    }
+    .hebmarslink{
+        height: 25%;
+        width: 45%; 
+    }
+}
+@media (max-width: 1023px){
+}
+@media (min-width: 1024px){
+    #divhebmars{
+        height: 550px;
+    }
+    .hebmarslink{
+        height: 35%;
+        width: 30%;
+    }
+}
+@media (min-width:1440px){
+    #divhebmars{
+        height:95%;
+        width:60%;
+        background-color: #f2f2f2;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+}
+@media (min-width: 768px) {
+    .affplus{
+        font-size: 1.3rem;
+    }
+}
+/*-----SEC 3 ACTIVITE-----*/
 @media (min-width: 768px) {
     #actmarscards{
         justify-content: space-between;
@@ -667,38 +711,14 @@ form button{
     }
 }
 @media (min-width:1440px){
-    #actmars{
+    #secact{
         height:450px;
-        
     }
 }
-/*     FOOTER      */
-footer{
-    display: flex;
-    justify-content: center;
-    padding:2rem 0rem 2rem 0rem;
-}
-#footerdiv{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 90%;
-}
-footer ul{
-    display: flex;
-    flex-direction:column ;    
-    justify-content: space-evenly;
-    height: 150px;
-    width: fit-content;
-    margin:0;
-}
-footer li{
-    margin:0;
-}
-footer h3{
-    font-weight: bold;
-    margin: 0;
-}
+
+/*-----FOOTER-----*/
 @media (min-width: 768px) {
-   
+    footer ul{
+        padding: 0;
+    }
 }
