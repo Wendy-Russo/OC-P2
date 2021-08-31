@@ -482,7 +482,7 @@ footer{
     justify-content: space-between;
     flex-wrap: wrap;
     width: 90%;
-}
+}     
 footer ul{
     display: flex;
     flex-direction:column ;    
