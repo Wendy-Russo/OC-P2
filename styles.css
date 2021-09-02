@@ -268,7 +268,7 @@ form button{
 
 
 /*     HEB POP      */
-#divhebpop{
+#sechebpop{
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
@@ -277,6 +277,7 @@ form button{
     height:500px;
     width: 100%;
     background-color: #f2f2f2;    
+    padding: 1rem 0 1rem 0;
 }
 .hebpoptitre{
     display: flex;
@@ -351,7 +352,7 @@ form button{
 
 
 /*     HEB MARSEILLE      */
-#divhebmars{
+#sechebmars{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -361,7 +362,7 @@ form button{
     width: 90%;
     padding: 1rem 0 1rem 0;
 }
-#divhebmars h2{
+#sechebmars h2{
     width: 100%;
     margin: 0;
 }
@@ -430,7 +431,7 @@ form button{
 #actmarstitre{
     height: fit-content;
     width:100%;
-    margin: 0;
+    margin: 1rem 0 1rem 0;
 }
 #actmarscards{
     display: flex;
@@ -438,14 +439,14 @@ form button{
     align-content: space-between;
     justify-content: center;
     width: 100%;
-    height: 900px;
+    height: 1000px;
     margin: 0;
     padding: 0;
 }
 .actmarslink,.actmarslinktall{
     display: flex;
     flex-wrap: wrap;
-    width: 85%;
+    width: 100%;
     height: 15%;
     margin: 0;
     background-color: white;
@@ -453,12 +454,13 @@ form button{
     box-shadow:0rem 0rem 1rem rgba(0, 0, 0, .1);
 }
 .actmarslink img,.actmarslinktall img{
-    height:85%;
+    height:75%;
     width: 100%;
     margin:0;
     object-fit: cover;
     border-radius: 1rem 1rem 0rem 0rem;
 }
+
 .actmarslink h3,.actmarslinktall h3{
     font-size: 1rem;
     font-weight: bold;
@@ -488,7 +490,8 @@ footer ul{
     flex-direction:column ;    
     justify-content: space-evenly;
     height: 150px;
-    width: fit-content;
+    width: 100%;
+    padding: 0;
     margin:0;
 }
 footer li{
@@ -594,6 +597,12 @@ footer h3{
         justify-content: space-evenly;
         height:40px;        
     }
+    .divinfo{
+        width: fit-content;
+    }
+    .divinfo i{
+        margin: 0 1rem 0 0;
+    }
 }
 @media (max-width: 1023px) {
 }
@@ -607,7 +616,7 @@ footer h3{
 /*-----SEC 2 HEB-----*/
 /*HEBPOP*/
 @media (min-width: 768px) {
-    #divhebpop{
+    #sechebpop{
         padding:1rem 0 1rem 0;
         height: 350px;
         justify-content: space-evenly;
@@ -620,7 +629,7 @@ footer h3{
     }
 }
 @media (min-width: 1024px){
-    #divhebpop{
+    #sechebpop{
         height: 200px;
     }
     .hebpoplink{
@@ -629,7 +638,7 @@ footer h3{
     }
 }
 @media (min-width:1440px){
-    #divhebpop{
+    #sechebpop{
         height:95%;
         width: 32.5%;
         border-radius: 1rem;
@@ -645,7 +654,7 @@ footer h3{
 }
 /*HEBMARS*/
 @media (min-width: 768px) {
-    #divhebmars{
+    #sechebmars{
         height: 800px;
         justify-content: space-between;
         padding:1rem 0 1rem 0;
@@ -658,7 +667,7 @@ footer h3{
 @media (max-width: 1023px){
 }
 @media (min-width: 1024px){
-    #divhebmars{
+    #sechebmars{
         height: 550px;
     }
     .hebmarslink{
@@ -667,7 +676,7 @@ footer h3{
     }
 }
 @media (min-width:1440px){
-    #divhebmars{
+    #sechebmars{
         height:95%;
         width:60%;
         background-color: #f2f2f2;
@@ -704,15 +713,23 @@ footer h3{
         width: 23%;
     } 
     .actmarslink{
-        height: 45%;
+        height: 47%;
     }
     .actmarslinktall{
         height: 100%;
     }
+    .actmarslink img{
+        height:68%;
+        margin:0;
+    }
+    .actmarslinktall img{
+        height:85%;
+        margin:0;
+    }
 }
 @media (min-width:1440px){
     #secact{
-        height:450px;
+      
     }
 }
 
@@ -720,5 +737,11 @@ footer h3{
 @media (min-width: 768px) {
     footer ul{
         padding: 0;
+        width: 30%;
+    }
+}
+@media (min-width: 1024px){
+    footer ul {
+        width: 33%;
     }
 }
